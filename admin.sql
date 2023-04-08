@@ -8,7 +8,7 @@ MySQL - 5.5.62
 create table `admin` (
 	`id` int (11),
 	`username` varchar (765),
-	`phone` varchar (765),
+	`phone` varchar (765),    
 	`createtime` date ,
 	`updatetime` date ,
 	`email` varchar (765),
