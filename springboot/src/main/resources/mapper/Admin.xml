@@ -38,7 +38,7 @@
                     and email  like concat('%', #{email}, '%')
                 </if>
             </where>
-        order by id desc
+        order by id asc
     </select>
 
     <select id="getById" resultType="com.example.springboot.entity.Admin">
