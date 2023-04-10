@@ -1,15 +1,11 @@
 # Software-engineering
 group-2
 
-运行前：
-修改jdbc.properties 本地mysql的用户名和密码以及对应端口号
-修改spring.xml 的16-18行
+2023/4/10
 
-开发：
-image存图片
-WEB-INF存放静态页面
+修改了relic表结构，更新了数据
 
-2023/4/8 实现了输入正确账户和密码进行登录
+修改了管理员列表排序方式
 
 2023/4/9
 
@@ -31,8 +27,14 @@ Vue/src/assets放置相关图片和 .css 代码
 
 新添加的账号默认密码是: hsjsbs5484
 
-2023/4/10
+2023/4/8
 
-修改了relic表结构，更新了数据
+运行前：
+修改jdbc.properties 本地mysql的用户名和密码以及对应端口号
+修改spring.xml 的16-18行
 
-修改了管理员列表排序方式
+开发：
+image存图片
+WEB-INF存放静态页面
+
+实现了输入正确账户和密码进行登录
