@@ -1,6 +1,14 @@
 # Software-engineering
 group-2
 
+2023/4/12
+
+删除了后端代码
+
+更新了vue代码
+
+删除了sql表
+
 2023/4/10
 
 修改了relic表结构，更新了数据
