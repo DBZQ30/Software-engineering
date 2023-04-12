@@ -1,14 +1,11 @@
 import Vue from 'vue'
+import axios from 'axios'
 import App from './App.vue'
 import router from './router'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import '../public/reset.css'
 import '@/assets/global.css'
-import SlideVerify from 'vue-monoplasty-slide-verify';
-
-Vue.use(SlideVerify);
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
-Vue.use(ElementUI, { size: 'small' });  // medium  small mini
 
 new Vue({
   router,
