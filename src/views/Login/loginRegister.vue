@@ -132,7 +132,7 @@ export default{
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  background: url("~@/assets/pic.jpg") no-repeat;
+  background: url("~@/assets/login.jpg") no-repeat;
   background-position: center;
   background-size:cover;
   position: fixed;

@@ -4,7 +4,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="/timeline">
-            <img src="../assets/layout1.jpg" width="1380" height="730">
+            <img src="../assets/timeline.jpg" width="1380" height="730">
           </a>
         </div>
         <div class="swiper-slide">
