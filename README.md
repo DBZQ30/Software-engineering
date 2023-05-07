@@ -5,6 +5,8 @@ group-2
 
 运行前：npm install
 
+运行：npm run serve
+
 2023/4/15
 
 clear
