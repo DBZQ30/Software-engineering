@@ -6,8 +6,8 @@
           <div class="btitle">账户登录</div>
           <div class="bform">
             <input type="email" placeholder="邮箱" v-model="form.email">
-            <input type="text" placeholder="用户名" v-model="form.username">
             <span class="errTips" v-if="emailError">* 邮箱填写错误 *</span>
+            <input type="text" placeholder="用户名" v-model="form.username">
             <input type="password" placeholder="密码" v-model="form.password">
             <span class="errTips" v-if="emailError">* 密码填写错误 *</span>
           </div>
@@ -81,10 +81,8 @@ export default {
                   alert("登陆成功！");
                   this.$router.push('/layout')
                   break;
-                case -1:
+                case 500:
                   this.emailError = true;
-                  break;
-                case 1:
                   this.passwordError = true;
                   break;
               }
