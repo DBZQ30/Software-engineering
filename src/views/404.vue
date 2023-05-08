@@ -11,7 +11,7 @@
 
 <style scoped="scoped">
 .bad{
-  background: url("~@/assets/img.png") no-repeat;
+  background: url("~@/assets/404.png") no-repeat;
   background-position: center;
   height:100%;
   width:100%;

@@ -4,12 +4,12 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="/timeline">
-            <img src="../assets/timeline.jpg" width="1380" height="730">
+            <img src="../assets/time_line.png" width="1380" height="730">
           </a>
         </div>
         <div class="swiper-slide">
           <a href="/relic">
-            <img src="../assets/layout2.jpg" width="1380" height="730">
+            <img src="../assets/relic_detail.png" width="1380" height="730">
           </a>
 
         </div>
