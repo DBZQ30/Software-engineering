@@ -5,15 +5,15 @@ Vue.use(VueRouter)
 
 const routes = [
   // ====== 登录  =====
-  // {
-  //   path:'/',
-  //   name:'login',
-  //   component: () => import('@/views/Login/loginRegister.vue'),
-  // },
+  {
+    path:'/',
+    name:'login',
+    component: () => import('@/views/Login/loginRegister.vue'),
+  },
 
   //  ====== 主页  =====
   {
-    path: '/',
+    path: '/layout',
     name: 'layout',
     component: () => import('@/views/Layout.vue'),
 

@@ -29,7 +29,6 @@
             <a :href="relicDetailData.web_url">{{ relicDetailData.web_url }}</a>
           </p>
         </div>
-
         <div>
         </div>
 
@@ -48,22 +47,192 @@ export default {
   name: "RelicDetail",
   data() {
     return {
-      relicDetailData:
-          {
-            "id": "157",
-            "title": "Vase with the Eight Daoist Immortals",
-            "dated": "c. 1300",
-            "artist": "",
-            "role": "Artist",
-            "department": "Asian Art",
-            "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
-            "country": "Enginsh",
-            "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
-            "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
-            "web_url": "https://collections.artsmia.org/art/157",
-            "img_url": "https://6.api.artsmia.org/157.jpg",
-            "submit_time": "2023-04-11 13:11:01"
-          },
+      relicDetailData: [
+
+      ],
+      temp:[
+        {
+          "id": "157",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Enginsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/157",
+          "img_url": "https://6.api.artsmia.org/157.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "158",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Enginsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/155",
+          "img_url": "https://6.api.artsmia.org/155.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "159",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Enginsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/168",
+          "img_url": "https://6.api.artsmia.org/168.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "160",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Enginsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/155",
+          "img_url": "https://6.api.artsmia.org/170.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "161",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/167",
+          "img_url": "https://6.api.artsmia.org/167.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "162",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1114",
+          "img_url": "https://6.api.artsmia.org/1114.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "163",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1115",
+          "img_url": "https://6.api.artsmia.org/1115.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "164",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1117",
+          "img_url": "https://6.api.artsmia.org/1117.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "165",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1118",
+          "img_url": "https://6.api.artsmia.org/1118.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "166",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1119",
+          "img_url": "https://6.api.artsmia.org/1119.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "167",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1120",
+          "img_url": "https://6.api.artsmia.org/1120.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+        {
+          "id": "168",
+          "title": "Vase with the Eight Daoist Immortals",
+          "dated": "c. 1300",
+          "artist": "",
+          "role": "Artist",
+          "department": "Asian Art",
+          "medium": "Longquan ware Porcelain with celadon glaze over impressed designs",
+          "country": "Englinsh",
+          "description": "Longquan ware; celadon glaze with 8 unglazed cartouches carved with immortals; floral cartouches above and below each immortal; low foot, narrow mouth",
+          "comments": "This ovoid vase has an octagonal cross section and each of the eight sides comprising the vessel is decorated with molded recessed panels depicting one of the Eight Daoist Immortals amidst two floral sprays. The images of the immortals are shown standing on drifting clouds and each carry their identifying attributes.\r\nA wax resist technique was employed in the decoration of this piece. The central panels were painted with wax before glazing to prevent the celadon glaze from adhering to those areas. Upon firing, the unglazed portions of the clay body burned a bright rust color due to iron compounds in the clay.",
+          "web_url": "https://collections.artsmia.org/art/1121",
+          "img_url": "https://6.api.artsmia.org/1121.jpg",
+          "submit_time": "2023-04-11 13:11:01"
+        },
+      ],
+
       participants: [
         {
           id: 'user1',
@@ -76,8 +245,6 @@ export default {
           imageUrl: 'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
         }
       ],
-
-
       // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
       messageList: [
@@ -153,9 +320,15 @@ export default {
     // 获取数据
     fetchRelicDetailData() {
       console.log('假设现在是调取接口数据，参数是id:' + this.$route.params.id)
-      const data = api()
+      // const data = api()
       //此处获取到接口的真实数据后替换data中的relicDetailData
-      this.relicDetailData = data
+      const index =  this.temp.findIndex((role) => role.id === this.$route.params.id)
+      console.log(index)
+      // const data = temp[index]
+      // this.relicDetailData = data
+      this.relicDetailData = this.temp[
+          this.temp.findIndex((role) => role.id === this.$route.params.id)
+          ];
     }
   },
   mounted() {

@@ -5,9 +5,10 @@
         <div class="big-contain" key="bigContainLogin" v-if="isLogin">
           <div class="btitle">账户登录</div>
           <div class="bform">
-            <input type="email" placeholder="邮箱" v-model="form.useremail">
+            <input type="email" placeholder="邮箱" v-model="form.email">
+            <input type="text" placeholder="用户名" v-model="form.username">
             <span class="errTips" v-if="emailError">* 邮箱填写错误 *</span>
-            <input type="password" placeholder="密码" v-model="form.userpwd">
+            <input type="password" placeholder="密码" v-model="form.password">
             <span class="errTips" v-if="emailError">* 密码填写错误 *</span>
           </div>
           <button class="bbutton" @click="login">登录</button>
@@ -17,8 +18,8 @@
           <div class="bform">
             <input type="text" placeholder="用户名" v-model="form.username">
             <span class="errTips" v-if="existed">* 用户名已经存在！ *</span>
-            <input type="email" placeholder="邮箱" v-model="form.useremail">
-            <input type="password" placeholder="密码" v-model="form.userpwd">
+            <input type="email" placeholder="邮箱" v-model="form.email">
+            <input type="password" placeholder="密码" v-model="form.password">
           </div>
           <button class="bbutton" @click="register">注册</button>
         </div>
@@ -40,43 +41,45 @@
 </template>
 
 <script>
-export default{
-  name:'login-register',
-  data(){
+export default {
+  name: 'login-register',
+  data() {
     return {
-      isLogin:false,
+      isLogin: false,
       emailError: false,
       passwordError: false,
       existed: false,
-      form:{
-        username:'',
-        useremail:'',
-        userpwd:''
+      form: {
+        username: '',
+        email: '',
+        password: ''
       }
     }
   },
-  methods:{
+  methods: {
     changeType() {
       this.isLogin = !this.isLogin
       this.form.username = ''
-      this.form.useremail = ''
-      this.form.userpwd = ''
+      this.form.email = ''
+      this.form.password = ''
     },
     login() {
       const self = this;
-      if (self.form.useremail != "" && self.form.userpwd != "") {
+      let form = self.form
+      if (self.form.email != "" && self.form.password != "" && self.form.username != '') {
         self.$axios({
-          method:'post',
-          url: 'http://127.0.0.1:10520/api/user/login',
+          method: 'post',
+          url: 'http://101.43.245.160:8081/users/login',
           data: {
-            email: self.form.useremail,
-            password: self.form.userpwd
+            ...form
           }
         })
-            .then( res => {
-              switch(res.data){
-                case 0:
+            .then(res => {
+              // console.log(res)
+              switch (res.data.code) {
+                case 200:
                   alert("登陆成功！");
+                  this.$router.push('/layout')
                   break;
                 case -1:
                   this.emailError = true;
@@ -86,27 +89,26 @@ export default{
                   break;
               }
             })
-            .catch( err => {
+            .catch(err => {
               console.log(err);
             })
-      } else{
+      } else {
         alert("填写不能为空！");
       }
     },
-    register(){
+    register() {
       const self = this;
-      if(self.form.username != "" && self.form.useremail != "" && self.form.userpwd != ""){
+      let form = self.form
+      if (self.form.password != "" && self.form.email != "" && self.form.password != "") {
         self.$axios({
-          method:'post',
-          url: 'http://127.0.0.1:10520/api/user/add',
+          method: 'post',
+          url: 'http://101.43.245.160:8081/users/registry',
           data: {
-            username: self.form.username,
-            email: self.form.useremail,
-            password: self.form.userpwd
+            ...form
           }
         })
-            .then( res => {
-              switch(res.data){
+            .then(res => {
+              switch (res.data) {
                 case 0:
                   alert("注册成功！");
                   this.login();
@@ -116,7 +118,7 @@ export default{
                   break;
               }
             })
-            .catch( err => {
+            .catch(err => {
               console.log(err);
             })
       } else {
@@ -128,29 +130,31 @@ export default{
 </script>
 
 <style scoped="scoped">
-.login-register{
+.login-register {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   background: url("~@/assets/login.jpg") no-repeat;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   position: fixed;
 }
-.contain{
+
+.contain {
   border: none;
   width: 60%;
   height: 60%;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: transparent;
   border-radius: 20px;
   /*box-shadow: 0 0 3px #f0f0f0,*/
   /*			0 0 6px #f0f0f0;*/
 }
-.big-box{
+
+.big-box {
   width: 70%;
   height: 100%;
   position: absolute;
@@ -159,7 +163,8 @@ export default{
   transform: translateX(0%);
   transition: all 1s;
 }
-.big-contain{
+
+.big-contain {
   width: 100%;
   height: 100%;
   display: flex;
@@ -167,12 +172,14 @@ export default{
   justify-content: center;
   align-items: center;
 }
-.btitle{
+
+.btitle {
   font-size: 1.5em;
   font-weight: bold;
-  color: rgb(57,167,176);
+  color: rgb(57, 167, 176);
 }
-.bform{
+
+.bform {
   width: 100%;
   height: 40%;
   padding: 2em 0;
@@ -181,7 +188,8 @@ export default{
   justify-content: space-around;
   align-items: center;
 }
-.bform .errTips{
+
+.bform .errTips {
   display: block;
   width: 50%;
   text-align: left;
@@ -189,7 +197,8 @@ export default{
   font-size: 0.7em;
   margin-left: 1em;
 }
-.bform input{
+
+.bform input {
   width: 50%;
   height: 30px;
   border: none;
@@ -198,18 +207,20 @@ export default{
   padding-left: 2em;
   background-color: #f0f0f0;
 }
-.bbutton{
+
+.bbutton {
   width: 20%;
   height: 40px;
   border-radius: 24px;
   border: none;
   outline: none;
-  background-color: rgb(57,167,176);
+  background-color: rgb(57, 167, 176);
   color: #fff;
   font-size: 0.9em;
   cursor: pointer;
 }
-.small-box{
+
+.small-box {
   width: 30%;
   height: 100%;
   /*background: linear-gradient(135deg,rgb(57,167,176),rgb(56,183,145));*/
@@ -222,7 +233,8 @@ export default{
   border-bottom-left-radius: inherit;
   background-color: transparent;
 }
-.small-contain{
+
+.small-contain {
   width: 100%;
   height: 100%;
   display: flex;
@@ -230,19 +242,22 @@ export default{
   justify-content: center;
   align-items: center;
 }
-.stitle{
+
+.stitle {
   font-size: 1.5em;
   font-weight: bold;
   color: #fff;
 }
-.scontent{
+
+.scontent {
   font-size: 0.8em;
   color: #fff;
   text-align: center;
   padding: 2em 4em;
   line-height: 1.7em;
 }
-.sbutton{
+
+.sbutton {
   width: 60%;
   height: 40px;
   border-radius: 24px;
@@ -254,11 +269,12 @@ export default{
   cursor: pointer;
 }
 
-.big-box.active{
+.big-box.active {
   left: 0;
   transition: all 0.5s;
 }
-.small-box.active{
+
+.small-box.active {
   left: 100%;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
