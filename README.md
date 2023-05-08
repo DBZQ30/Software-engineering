@@ -1,10 +1,9 @@
 # Software-engineering
 group-2
 
-2023/4/16
+Vue 2.0
 
 运行前：npm install
 
-2023/4/15
+运行：npm run serve
 
-clear
