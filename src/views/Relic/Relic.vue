@@ -10,10 +10,10 @@
       </el-col>
 
       <el-col :span="2">
-        <el-button type="primary" @click="filterData">Search</el-button>
+        <el-button type="primary" @click="filterData" class="button">Search</el-button>
       </el-col>
       <el-col :span="1">
-        <el-button type="primary" @click="reset">Reset</el-button>
+        <el-button type="primary" @click="reset" class="button">Reset</el-button>
       </el-col>
 
     </el-row>
@@ -29,6 +29,7 @@
       <div class="index-board-button">
         <el-button
             type="primary"
+            class="button"
         @click="$router.push({ path: `/relic-detail/${item.id}` })">Details</el-button>
       </div>
     </div>
@@ -286,10 +287,11 @@ export default {
 }
 
 .button {
-  background: #4fc08d;
-  color: #fff;
+  background: dimgray;
+  color: white;
   display: inline-block;
   padding: 10px 20px;
+  margin-top: 2px;
   cursor: pointer;
 }
 </style>
