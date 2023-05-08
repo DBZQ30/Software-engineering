@@ -106,12 +106,12 @@ export default {
           }
         })
             .then(res => {
-              switch (res.data) {
-                case 0:
+              switch (res.data.code) {
+                case 200:
                   alert("注册成功！");
                   this.login();
                   break;
-                case -1:
+                case 500:
                   this.existed = true;
                   break;
               }
@@ -127,7 +127,8 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped = "scoped">
+
 .login-register {
   width: 100vw;
   height: 100vh;
