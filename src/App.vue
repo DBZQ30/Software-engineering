@@ -9,6 +9,6 @@
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: white;
   }
 </style>
