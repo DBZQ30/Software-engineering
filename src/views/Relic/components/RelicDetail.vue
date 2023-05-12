@@ -47,6 +47,10 @@ export default {
   name: "RelicDetail",
   data() {
     return {
+      suggestions: [
+          "这个文物的作者是谁",
+          "这个文物的材质是什么"
+      ],
       relicDetailData: [
 
       ],
@@ -355,21 +359,21 @@ export default {
 
       participants: [
         {
-          id: 'user1',
+          id: '1',
           name: 'Matteo',
           imageUrl: 'https://avatars3.githubusercontent.com/u/1915989?s=230&v=4'
         },
         {
-          id: 'user2',
-          name: 'Support',
+          id: 'user1',
+          name: 'support',
           imageUrl: 'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
         }
       ],
       // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
       messageList: [
-        { type: 'text', author: `me`, data: { text: `Say yes!` } },
-        { type: 'text', author: `user1`, data: { text: `No.` } }
+        // { type: 'text', author: `me`, data: { text: `Say yes!` } },
+        { type: 'text', author: `user1`, data: { text: `你好！我是mercury，我是一名研究中国文物的专家。很高兴认识你！` } }
       ], // the list of the messages to show, can be paginated and adjusted dynamically
       newMessagesCount: 0,
       isChatOpen: false, // to determine whether the chat window should be open or closed
@@ -399,8 +403,8 @@ export default {
         }
       }, // specifies the color scheme for the component
       alwaysScrollToBottom: false, // when set to true always scrolls the chat to the bottom when new events are in (new message, user starts typing...)
-      messageStyling: true // enables *bold* /emph/ _underline_ and such (more info at github.com/mattezza/msgdown)
-
+      messageStyling: true, // enables *bold* /emph/ _underline_ and such (more info at github.com/mattezza/msgdown)
+      userIsTyping: false,
     }
   },
   methods: {
@@ -413,7 +417,35 @@ export default {
     },
     onMessageWasSent(message) {
       // called when the user sends a message
-      this.messageList = [...this.messageList, message]
+      if (message.author === 'support') {
+
+      } else {
+        this.messageList = [...this.messageList, message]
+        this.showTypingIndicator = this.participants[this.participants.length - 1].id
+        this.$axios({
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': '*/*',
+          },
+          url: 'http://123.57.82.78:9000/api/conversation/',
+          data: {
+            'message': message.data.text,
+            'userId': this.participants[0].id
+          }
+        })
+            .then(res => {
+              console.log(res)
+              if (res.data.result === 'success') {
+                  const response = { author: 'support', type: 'text', data: {'text': res.data.data} }
+                  this.showTypingIndicator = ''
+                  this.messageList = [...this.messageList, response]
+              }
+            })
+            .catch(err => {
+              console.log(err);
+            })
+      }
     },
     openChat() {
       // called when the user clicks on the fab button to open the chat
@@ -428,9 +460,10 @@ export default {
       // called when the user scrolls message list to top
       // leverage pagination for loading another page of messages
     },
-    handleOnType() {
-      console.log('Emit typing event')
-    },
+      handleOnType() {
+        this.$root.$emit('onType')
+        this.userIsTyping = true
+      },
     editMessage(message) {
       const m = this.messageList.find(m => m.id === message.id);
       m.isEdited = true;
