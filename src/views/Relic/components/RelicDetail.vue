@@ -479,6 +479,8 @@ export default {
       console.log(index)
       // const data = temp[index]
       // this.relicDetailData = data
+
+
       this.relicDetailData = this.temp[
           this.temp.findIndex((role) => role.id === this.$route.params.id)
           ];
