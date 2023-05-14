@@ -4,14 +4,13 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="/timeline">
-            <img src="../assets/time_line.png" width="1380" height="730">
+            <img src="../assets/time_line.png" class="fronter">
           </a>
         </div>
         <div class="swiper-slide">
           <a href="/relic">
-            <img src="../assets/relic_detail.png" width="1380" height="730">
+            <img src="../assets/relic_detail.png" class="fronter">
           </a>
-
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -22,6 +21,7 @@
       <div class="swiper-button-next"></div>
 
     </div>
+    <div class="dibu">欢迎来到海外文物知识服务子系统</div>
   </div>
 </template>
 
@@ -59,9 +59,26 @@ export default {
 </script>
 
 <style>
+
+body {
+  height: 100%;
+  background-color: dimgray;
+}
 .swiper-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.fronter {
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
-
+.dibu {
+  background-color: dimgray;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+}
 </style>

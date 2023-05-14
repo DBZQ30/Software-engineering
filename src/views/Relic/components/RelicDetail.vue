@@ -48,8 +48,8 @@ export default {
   data() {
     return {
       suggestions: [
-          "这个文物的作者是谁",
-          "这个文物的材质是什么"
+          "这个文物的作者是谁?",
+          "这个文物的材质是什么?"
       ],
       relicDetailData: [
 
@@ -360,13 +360,8 @@ export default {
       participants: [
         {
           id: '1',
-          name: 'Matteo',
+          name: 'Mercury',
           imageUrl: 'https://avatars3.githubusercontent.com/u/1915989?s=230&v=4'
-        },
-        {
-          id: 'user1',
-          name: 'support',
-          imageUrl: 'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
         }
       ],
       // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
