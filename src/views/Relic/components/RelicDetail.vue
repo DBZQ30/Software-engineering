@@ -14,7 +14,7 @@
           <p><span class="miaoshu">ID：</span>{{ relicDetailData.id }}</p>
           <p><span class="miaoshu">Title：</span>{{ relicDetailData.title }}</p>
           <p><span class="miaoshu">Dated：</span>{{ relicDetailData.dated }}</p>
-          <p><span class="miaoshu">Artist：</span>{{ relicDetailData.artist }}</p>
+<!--          <p><span class="miaoshu">Artist：</span>{{ relicDetailData.artist }}</p>-->
           <p><span class="miaoshu">Role：</span>{{ relicDetailData.role }}</p>
           <p><span class="miaoshu">Department：</span>{{ relicDetailData.department }}</p>
           <p><span class="miaoshu">Country：</span>{{ relicDetailData.country }}</p>

@@ -3,14 +3,14 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <a href="/timeline">
+          <router-link :to="{path: '/timeline'}">
             <img src="../assets/time_line.png" class="fronter">
-          </a>
+          </router-link>
         </div>
         <div class="swiper-slide">
-          <a href="/relic">
+          <router-link :to="{path: '/relic'}">
             <img src="../assets/relic_detail.png" class="fronter">
-          </a>
+          </router-link>
         </div>
       </div>
       <!-- 如果需要分页器 -->

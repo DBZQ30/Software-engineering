@@ -30,7 +30,7 @@
         <el-button
             type="primary"
             class="button"
-        @click="$router.push({ path: `/relic-detail/${item.id}` })">Details</el-button>
+            @click="$router.push({ path: `/relic-detail/${item.id}` })">Details</el-button>
       </div>
     </div>
   </div>
