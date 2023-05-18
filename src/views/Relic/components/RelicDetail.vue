@@ -11,22 +11,22 @@
     <div class="container">
       <div class="relic-container">
         <div class="left">
-          <p><span class="miaoshu">文物ID：</span>{{ relicDetailData.id }}</p>
-          <p><span class="miaoshu">文物标题：</span>{{ relicDetailData.title }}</p>
-          <p><span class="miaoshu">dated：</span>{{ relicDetailData.dated }}</p>
-          <p><span class="miaoshu">artist：</span>{{ relicDetailData.artist }}</p>
-          <p><span class="miaoshu">role：</span>{{ relicDetailData.role }}</p>
-          <p><span class="miaoshu">department：</span>{{ relicDetailData.department }}</p>
-          <p><span class="miaoshu">country：</span>{{ relicDetailData.country }}</p>
-          <p><span class="miaoshu">description：</span>{{ relicDetailData.description }}</p>
+          <p><span class="miaoshu">ID：</span>{{ relicDetailData.id }}</p>
+          <p><span class="miaoshu">Title：</span>{{ relicDetailData.title }}</p>
+          <p><span class="miaoshu">Dated：</span>{{ relicDetailData.dated }}</p>
+          <p><span class="miaoshu">Artist：</span>{{ relicDetailData.artist }}</p>
+          <p><span class="miaoshu">Role：</span>{{ relicDetailData.role }}</p>
+          <p><span class="miaoshu">Department：</span>{{ relicDetailData.department }}</p>
+          <p><span class="miaoshu">Country：</span>{{ relicDetailData.country }}</p>
+          <p><span class="miaoshu">Description：</span>{{ relicDetailData.description }}</p>
 
         </div>
         <div class="center">
           <img :src="relicDetailData.imgUrl" alt="">
         </div>
         <div class="right">
-          <p><span class="miaoshu">comments: </span>{{ relicDetailData.comments }}</p>
-          <p><span class="miaoshu">web_url：</span>
+          <p><span class="miaoshu">Comments: </span>{{ relicDetailData.comments }}</p>
+          <p><span class="miaoshu">Web_url：</span>
             <a :href="relicDetailData.webUrl">{{ relicDetailData.webUrl }}</a>
           </p>
         </div>
