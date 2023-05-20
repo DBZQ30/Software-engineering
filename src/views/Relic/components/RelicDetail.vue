@@ -14,18 +14,20 @@
           <p><span class="miaoshu">ID：</span>{{ relicDetailData.id }}</p>
           <p><span class="miaoshu">Title：</span>{{ relicDetailData.title }}</p>
           <p><span class="miaoshu">Dated：</span>{{ relicDetailData.dated }}</p>
-<!--          <p><span class="miaoshu">Artist：</span>{{ relicDetailData.artist }}</p>-->
+          <p v-if="relicDetailData.artist.length > 0"><span class="miaoshu">Artist：</span>{{relicDetailData.artist}}</p>
+          <p v-else><span class="miaoshu">Artist：</span>Unknown</p>
           <p><span class="miaoshu">Role：</span>{{ relicDetailData.role }}</p>
           <p><span class="miaoshu">Department：</span>{{ relicDetailData.department }}</p>
           <p><span class="miaoshu">Country：</span>{{ relicDetailData.country }}</p>
           <p><span class="miaoshu">Description：</span>{{ relicDetailData.description }}</p>
-
         </div>
         <div class="center">
           <img :src="relicDetailData.imgUrl" alt="">
         </div>
         <div class="right">
-          <p><span class="miaoshu">Comments: </span>{{ relicDetailData.comments }}</p>
+          <p v-if="relicDetailData.comments.length > 0"><span class="miaoshu">Comments: </span>{{ relicDetailData.comments }}</p>
+          <p v-else><span class="miaoshu">Comments: </span>
+            This cultural relic is a relic and relic left over by humanity in the process of historical development. It reflects human social activities, social relationships, ideologies, and the utilization, transformation, and ecological environment of nature in various historical periods from different perspectives, and is a precious historical and cultural heritage of humanity.</p>
           <p><span class="miaoshu">Web_url：</span>
             <a :href="relicDetailData.webUrl">{{ relicDetailData.webUrl }}</a>
           </p>
@@ -199,7 +201,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .miaoshu {

@@ -2,11 +2,11 @@
   <div>
     <el-row :gutter="24" type="flex" justify="start">
       <el-col :span="4">
-        <el-input v-model="selectedDepartment" placeholder="Search by department"></el-input>
+        <el-input v-model="selectedID" placeholder="Search by ID"></el-input>
       </el-col>
 
       <el-col :span="4">
-        <el-input v-model="selectedCountry" placeholder="Search by country"></el-input>
+        <el-input v-model="selectedDated" placeholder="Search by Dated"></el-input>
       </el-col>
 
       <el-col :span="2">
@@ -54,17 +54,18 @@ export default {
   name: 'app',
   data() {
     return {
-      selectedCountry: '',
-      selectedDepartment: '',
+      selectedDated: '',
+      selectedID: '',
       showList: [],
       relic: [],
-    };
+
+  };
   },
 
 
   mounted() {
     axios.get('http://101.43.245.160:8081//artifact/all').then(response=>{
-      console.log(response.data)
+      console.log(response.data.data)
       this.relic = response.data.data
       this.showList = response.data.data
     }).catch(error=>{
@@ -81,19 +82,19 @@ export default {
       //   console.log('hello')
       // })
 
-      if (this.selectedCountry == '' && this.selectedDepartment == '') {
+      if (this.selectedDated == '' && this.selectedID == '') {
         this.showList = JSON.parse(JSON.stringify(this.relic))
         return
       }
       this.showList = this.relic.filter(item => {
-        if(this.selectedCountry == '') return item.department === this.selectedDepartment
-        if(this.selectedDepartment == '') return item.country === this.selectedCountry
-        return item.department === this.selectedDepartment && item.country === this.selectedCountry
+        if(this.selectedDated == '') return item.id === this.selectedID
+        if(this.selectedID == '') return item.dated === this.selectedDated
+        return item.id === this.selectedID && item.dated === this.selectedDated
       })
     },
     reset() {
-      this.selectedCountry = ''
-      this.selectedDepartment = ''
+      this.selectedDated = ''
+      this.selectedID = ''
       this.showList = JSON.parse(JSON.stringify(this.relic))
     }
   }
@@ -111,6 +112,7 @@ export default {
   margin-right: 17px;
   margin-left: 17px;
   margin-bottom: 80px;
+  margin-top: 5px;
   background-color: dimgray;
 }
 
