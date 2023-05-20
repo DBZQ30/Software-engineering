@@ -23,7 +23,7 @@
         :key="index"
         class="index-board-item"
     >
-      <div>
+      <div class="pic">
         <img :src="item.imgUrl" alt="">
       </div>
       <div class="index-board-button">
@@ -114,6 +114,13 @@ export default {
   margin-bottom: 80px;
   margin-top: 5px;
   background-color: dimgray;
+
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .index-board-item h2 {
@@ -121,10 +128,11 @@ export default {
   font-weight: bold;
   color: #000;
   margin-bottom: 15px;
+
 }
 
 .index-board-button {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-left: 80px;
 }
 
